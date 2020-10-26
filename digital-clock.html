@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+  </head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: black;
+    }
+
+    .clock {
+      margin: 20% auto;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      border: 3px solid #f1b3f7;
+      border-radius: 6px;
+      box-shadow: 0 0 10px 4px #f1b3f7;
+      width: 390px;
+      height: 160px;
+      background-color: black;
+      padding: 15px auto;
+    }
+
+    .today {
+      font-size: 15px;
+      letter-spacing: 6px;
+      color: #f1b3f7;
+      text-align: center;
+      text-shadow: 0px 0 40px #dda1f8;
+      flex: 60px;
+      padding-top: 20px;
+    }
+
+    .clock-display {
+      text-align: center;
+      letter-spacing: 6px;
+      color: #f1b3f7;
+      transition: all 0.4s cubic-bezier(0.6, -0.51, 0.5, 1.51);
+      text-shadow: 0px 0 40px #dda1f8;
+      font-size: 50px;
+      font-weight: 500;
+      flex: 100px;
+    }
+  </style>
+  <!-- CONTENT-->
+  <body>
+    <div class="clock">
+      <div class="today" id="TodayDate" onload="displayDate()"></div>
+      <div class="clock-display" id="ClockFace" onload="displayTime()"></div>
+    </div>
+  </body>
+  <!-- /CONTENT-->
+  <script>
+    function displayDate() {
+      let date = new Date();
+      let now = date.getDate();
+
+      let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      let month = months[date.getMonth()];
+      let days = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ];
+      let day = days[date.getDay()];
+      let year = date.getFullYear();
+
+      let today = `${month} ${now}, ${year}`;
+
+      document.getElementById("TodayDate").innerText = today;
+      document.getElementById("TodayDate").textContent = today;
+    }
+
+    function displayTime() {
+      let date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      let time = hours + ":" + minutes + ":" + seconds;
+
+      document.getElementById("ClockFace").innerText = time;
+
+      document.getElementById("ClockFace").textContent = time;
+
+      setInterval(displayTime, 1000);
+    }
+    displayDate();
+    displayTime();
+  </script>
+</html>
