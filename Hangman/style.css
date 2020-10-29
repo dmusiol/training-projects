@@ -1,0 +1,64 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  margin: 10px auto;
+  padding: 10px 10px;
+  width: 800px;
+  height: 600px;
+  background-color: #c0cdfd;
+  border: 3px solid #3c64ff;
+  border-radius: 6px;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.game-wrapper {
+  padding: 10px;
+}
+
+#clue {
+  font-weight: 600;
+}
+.extra-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  margin: 10px;
+  border: 2px solid #3c64ff;
+  border-radius: 6px;
+  padding: 10px 10px;
+  width: 150px;
+  background-color: #3c64ff;
+  color: white;
+  font-weight: 600;
+}
+
+footer {
+  margin: 10px auto;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #3c64ff;
+  font-size: 14px;
+}
