@@ -52,6 +52,19 @@ button {
   font-weight: 600;
 }
 
+button:hover {
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  border: 2px solid #3c64ff;
+  border-radius: 6px;
+  box-shadow: 1px 2px 8px #6f8af7;
+}
+button:focus,
+button:active {
+  box-shadow: none !important;
+  outline: inherit;
+}
+
 footer {
   margin: 10px auto;
   text-align: center;
@@ -61,4 +74,59 @@ footer a {
   text-decoration: none;
   color: #3c64ff;
   font-size: 14px;
+}
+
+canvas {
+  margin: 10px 222px;
+  color: white;
+  border: white dashed 2px;
+  padding: 15px;
+}
+
+#alphabet {
+  margin: 15px auto;
+  padding: 0;
+  max-width: 900px;
+  border: 5px;
+}
+
+#alphabet:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#alphabet li {
+  float: left;
+  margin: 0 10px 10px 0;
+  list-style: none;
+  width: 35px;
+  height: 30px;
+  padding-top: 10px;
+  background: white;
+  color: white;
+  cursor: pointer;
+  border: solid 1px white;
+}
+
+#new-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display: block;
+}
+
+#new-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 1.6em;
+}
+
+#lives {
+  font-size: 1.6em;
+  text-align: center;
+  display: block;
 }
